@@ -101,15 +101,7 @@
         Each spec is represented by one module. "test-utils" is a helper module. -->
     <modules>
         <module>test-utils</module>
-        <module>servlet</module>
-        <module>jaxrs</module>
-        <module>security</module>
-        <module>jsf</module>
         <module>cdi</module>
-        <module>jpa</module>
-        <module>jsonb</module>
-        <module>validation</module>
-        <module>json-p</module>
     </modules>
 
     <dependencyManagement>
