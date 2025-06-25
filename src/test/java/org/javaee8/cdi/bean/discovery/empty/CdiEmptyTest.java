@@ -1,6 +1,7 @@
 package org.javaee8.cdi.bean.discovery.empty;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Set;
 
@@ -31,12 +32,13 @@ public class CdiEmptyTest {
     BeanManager beanManager;
 
     /**
-     * Should work the same as 'all'.
+     * Should work the same as 'annotated'.
      */
     @Test
     public void should_beans_be_injected() throws Exception {
+        // In Jakarta EE 10, empty beans.xml defaults to "annotated" mode
         Set<Bean<?>> disabledBeans = beanManager.getBeans(CdiDisabledBean.class);
-        assertFalse("Instances of disabled bean expected.", disabledBeans.isEmpty());
+        assertTrue("No instances of disabled bean expected.", disabledBeans.isEmpty());
 
         Set<Bean<?>> enabledBeans = beanManager.getBeans(CdiEnabledBean.class);
         assertFalse("Instances of enabled bean expected.", enabledBeans.isEmpty());
