@@ -21,7 +21,6 @@
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <maven-surefire-plugin.version>3.5.1</maven-surefire-plugin.version>
         <maven-surefire-report-plugin.version>3.5.1</maven-surefire-report-plugin.version>
-        <cargo-maven3-plugin.version>1.10.7</cargo-maven3-plugin.version>
 
         <!-- Java EE API -->
         <javaee-api.version>8.0</javaee-api.version>
@@ -133,26 +132,6 @@
                     <scope>test</scope>
                 </dependency>
             </dependencies>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.cargo</groupId>
-                        <artifactId>cargo-maven3-plugin</artifactId>
-                        <version>${cargo-maven3-plugin.version}</version>
-                        <configuration>
-                        <container>
-                            <containerId>payara</containerId>
-                            <artifactInstaller>
-                                <groupId>fish.payara.distributions</groupId>
-                                <artifactId>payara</artifactId>
-                                <version>${payara.version}</version>
-                            </artifactInstaller>
-                            <timeout>180000</timeout>
-                        </container>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
         </profile>
     </profiles>
     <reporting>
