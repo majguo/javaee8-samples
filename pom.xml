@@ -103,8 +103,8 @@
             </activation>
             <properties>
                 <!-- Payara server -->
-                <payara.version>5.2022.5</payara.version>
-                <arquillian-payara.version>2.4.6</arquillian-payara.version>
+                <payara.version>6.2025.3</payara.version>
+                <arquillian-payara.version>3.1</arquillian-payara.version>
             </properties>
             <dependencies>
                 <dependency>
