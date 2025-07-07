@@ -22,8 +22,8 @@
         <maven-surefire-plugin.version>3.5.1</maven-surefire-plugin.version>
         <maven-surefire-report-plugin.version>3.5.1</maven-surefire-report-plugin.version>
 
-        <!-- Java EE API -->
-        <javaee-api.version>8.0</javaee-api.version>
+        <!-- Jakarta EE API -->
+        <jakartaee-api.version>9.1.0</jakartaee-api.version>
 
         <!-- Arquillian BOM -->
         <arquillian-bom.version>1.8.1.Final</arquillian-bom.version>
@@ -37,7 +37,7 @@
             <dependency>
                 <groupId>jakarta.platform</groupId>
                 <artifactId>jakarta.jakartaee-api</artifactId>
-                <version>9.0.0</version>
+                <version>${jakartaee-api.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -108,8 +108,8 @@
             </activation>
             <properties>
                 <!-- Payara server -->
-                <payara.version>5.2022.5</payara.version>
-                <arquillian-payara.version>2.4.6</arquillian-payara.version>
+                <payara.version>6.2023.11</payara.version>
+                <arquillian-payara.version>3.0.alpha7</arquillian-payara.version>
             </properties>
             <dependencies>
                 <dependency>
